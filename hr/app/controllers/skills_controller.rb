@@ -9,7 +9,7 @@ class SkillsController < ApplicationController
  
   def destroy
     @resume = Resume.find(params[:resume_id])
-    @skill = @resmue.skills.find(params[:id])
+    @skill = @resume.skills.find(params[:id])
     @skill.destroy
     redirect_to resume_path(@resume)
   end
